@@ -1,17 +1,34 @@
-# Bank_Customers_Segmentation
-This project aims to segment bank customers based on their account balances and transaction behaviors. By leveraging clustering techniques and dimensionality reduction, we identify patterns in customer data that can be used for targeted marketing, risk analysis, and customer profiling.
+#Bank Customer Segmentation using KMeans and PCA
 
-*Key Features :*
-- Data Preprocessing: Cleaning and handling missing data, imputations, and scaling.
-- Dimensionality Reduction: PCA for reducing data to 2 dimensions for clustering visualization.
-- Clustering: K-Means clustering with optimal clusters determined using the Elbow method.
-- Insights: Interpretations of customer clusters and their business implications.
+*Overview*
+This project demonstrates clustering bank customers into meaningful segments based on their transaction behavior. The segmentation is performed using Principal Component Analysis (PCA) for dimensionality reduction and KMeans Clustering for grouping customers into clusters.
 
-*Performance Metrics*
-Include metrics to assess clustering performance:
-- **Silhouette Score:** Measures how well clusters are separated. Higher values indicate better clustering.
-- **Inertia:** Measures within-cluster variance. Lower values indicate compact clusters.
-- **Explained Variance Ratio (PCA):** Shows how much variance is captured by the principal components.
+The dataset was initially a large CSV file, which was converted into a compressed Parquet file format for faster processing and reduced storage requirements.
+
+*Project Workflow*
+1).Data Cleaning and Preprocessing:
+-Handling missing values.
+-Scaling numerical features using StandardScaler.
+-Performing dimensionality reduction using PCA.
+
+2). *Clustering:*
+
+-Using the KMeans algorithm to group customers into clusters.
+-Determining the optimal number of clusters using the Elbow Method and Davies-Bouldin Index.
+
+3). *Visualization:*
+
+-Visualizing clusters using the reduced dimensions from PCA.
+-Interpreting the characteristics of each cluster.
+
+*Compressed Parquet File:*
+
+The dataset was saved as a compressed Parquet (.parquet.gz) file for optimized storage and performance.
+Why Parquet Format?
+Faster Processing: Parquet files are optimized for query performance and storage efficiency.
+Reduced Size: Compression significantly reduces file size, making it suitable for large datasets.
+Compatibility: Supported by tools like Pandas, Spark, and other data analysis frameworks.
+
 
 This project is licensed under the MIT License.
 
